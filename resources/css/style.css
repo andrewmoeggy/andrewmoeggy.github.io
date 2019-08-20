@@ -51,10 +51,14 @@ header {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   line-height: 1.75;
+  font-weight: 100;
 }
 
+
+
+/*   MAIN NAV   */
 .main-nav {
   display: flex;
   justify-content: flex-end;
@@ -81,6 +85,29 @@ header {
 .main-nav li a:hover, 
 .main-nav li a:active {
   border-bottom: 2px solid #0c755e;
+}
+
+/* STICKY NAV */
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.99);
+  display: flex;
+  justify-content: flex-end;
+  box-shadow: 0 2px 2px rgba(136, 136, 136, .4);
+  z-index: 100;
+}
+.sticky .main-nav li a:link, 
+.sticky .main-nav li a:visited {
+  color: #555;
+  padding: 8px 10px;
+}
+.sticky .main-nav li {
+  margin: 20px 10px;
+  margin-right: 40px;
 }
 
 .hero-box-text {
@@ -167,8 +194,6 @@ header {
   grid-template-columns: repeat(12,1fr);
   grid-template-rows: repeat(3,1fr);
   padding: 8rem 0;
-  margin-bottom: 5rem;
-  text-align: center;
 }
 
 .about__heading {
@@ -189,6 +214,7 @@ header {
   font-size: 2.2rem;
   font-weight: 300;
   line-height: 1.75;
+  text-align: justify;
 }
 
 /* ABOUT BENEFITS */
@@ -238,7 +264,7 @@ header {
 
  .section__skills {
   background-color: #F7F7F7;
-  padding: 8rem;
+  padding: 6rem;
 }
 
 .section__skills--heading {
