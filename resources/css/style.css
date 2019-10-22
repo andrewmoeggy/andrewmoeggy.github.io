@@ -10,6 +10,7 @@ html {
   font-size: 62.5%;
   font-weight: 300;
   text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
 }
 
 .secondary__heading {
@@ -17,7 +18,6 @@ html {
     font-weight: 300;
     padding-bottom: 3rem;
     border-bottom: 2px solid aqua;
-    width: 10%;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 4.5rem;
@@ -54,6 +54,10 @@ header {
   text-align: left;
   line-height: 1.75;
   font-weight: 100;
+}
+
+.strobe-off {
+  display: none;
 }
 
 
@@ -186,8 +190,8 @@ header {
     /* ABOUT */
 /* -------------------------------------------------------- */
 .about__section {
-  margin: auto;
-  width: 60vw;
+  margin: 0 auto;
+  width: 80vw;
 }
 .about {
   display: grid;
@@ -217,6 +221,30 @@ header {
   text-align: justify;
 }
 
+@media only screen and (max-width: 1050px) {
+  
+  .about-section {
+    margin: none;
+  }
+  .about__blurb {
+    grid-column: 1 / -1;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .about {
+    grid-template-rows: 1fr 2fr 2fr;
+    padding-bottom: 0;
+  }
+  .about__heading {
+    padding-bottom: 0;
+    font-size: 3.5rem;
+    margin: 0 auto;
+    margin-bottom: 6.5rem;
+    color: #555;
+    grid-column: 6/8;
+  }
+}
 /* ABOUT BENEFITS */
 .about__benefits {
   display: flex;
@@ -224,15 +252,12 @@ header {
   padding: 5rem 0;
   margin-bottom: 12rem;
  }
- .about__benefits div {
-     display: flex;
-     justify-content: space-around;
-     height: 10vh;
-     
- }
+
  .about__benefits--item {
      display: flex;
      flex-direction: column;
+     justify-content: space-around;
+     height: 10vh;
  }
  
  .about__benefits--heading {
@@ -243,7 +268,7 @@ header {
      text-align: center;
      padding-bottom: 1.7rem;
  }
- 
+
  .about__benefits__blurb {
      font-size: 1.8rem;
      line-height: 1.7;
@@ -257,6 +282,36 @@ header {
      padding-bottom: 1.5rem;
  }
 
+ @media only screen and (max-width: 850px) {
+  .about__benefits {
+    padding-top: 0;
+    flex-direction: column;
+    margin-bottom: 5rem;
+  }
+  .about__benefits--item {
+    margin-bottom: 4rem;
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+  }
+  .about__benefits--item:last-child {
+    margin-bottom: 0;
+  }
+  .about__benefits--heading {
+    margin: auto 0;
+    padding-bottom: 1rem;
+  }
+  .about__benefits__blurb {
+    justify-self: flex-end;
+    padding-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  .about__heading {
+    grid-column: 4/10;
+  }
+}
 
 /* -------------------------------------------------------- */
     /* SKILLS */
@@ -269,7 +324,7 @@ header {
 
 .section__skills--heading {
   display: flex;
-  justify-content: center;
+  align-items: center;
   flex-direction: column;
   padding-bottom: 8rem;
   height: 100%;
@@ -304,12 +359,30 @@ header {
   font-size: 3.5rem;
 }
 
+@media only screen and (max-width: 1050px) {
+  .section__skills--main-list {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .section__skills--list {
+    width: 100%;
+  }
+  .section__skills--item {
+    text-align: center;
+  }
+}
+
 /* -------------------------------------------------------- */
     /* Projects */
 /* -------------------------------------------------------- */
 
 .projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 7rem;
+  margin: 0 auto;
 }
 
 
@@ -320,10 +393,10 @@ header {
 }
 
 .projects__list--item {
-  margin: 4rem;
+  margin: .5vw;
   background-color: yellow;
-  padding: 14rem;
-  height: 15rem;
+  padding: 1.5vw;
+  height: 1.5vw;
 }
 /* -------------------------------------------------------- */
     /* FOOTER */
