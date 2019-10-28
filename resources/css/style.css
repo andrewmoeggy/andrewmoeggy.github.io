@@ -113,7 +113,11 @@ header {
   margin: 20px 10px;
   margin-right: 40px;
 }
-
+@media only screen and (max-width:480px) {
+  .sticky  {
+    justify-content: stretch;
+  }
+}
 .hero-box-text {
   color: #fff;
   font-size: 5rem;
@@ -247,21 +251,21 @@ header {
 }
 /* ABOUT BENEFITS */
 .about__benefits {
-  display: flex;
-  justify-content: space-between;
-  padding: 5rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
   margin-bottom: 12rem;
  }
 
  .about__benefits--item {
-     display: flex;
-     flex-direction: column;
-     justify-content: space-around;
-     height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    margin: 4rem;
  }
  
  .about__benefits--heading {
-     margin-top: 4rem;
+     margin-top: 2rem;
      font-size: 1.8rem;
      text-transform: uppercase;
      color: #5f5f5f;
@@ -282,16 +286,18 @@ header {
      padding-bottom: 1.5rem;
  }
 
+
  @media only screen and (max-width: 850px) {
+   .about {
+     grid-template-rows: 1fr 3fr;
+     padding-bottom: 0;
+   }
   .about__benefits {
     padding-top: 0;
     flex-direction: column;
-    margin-bottom: 5rem;
   }
   .about__benefits--item {
-    margin-bottom: 4rem;
-    flex-direction: column;
-    align-items: stretch;
+    margin: 2rem;
     height: auto;
   }
   .about__benefits--item:last-child {
@@ -308,8 +314,15 @@ header {
 }
 
 @media only screen and (max-width: 470px) {
+  
   .about__heading {
     grid-column: 4/10;
+  }
+  .about__blurb {
+    font-size: 1.8rem;
+  }
+  .about__benefits {
+    margin-bottom: 2.5rem;
   }
 }
 
@@ -370,6 +383,22 @@ header {
   }
   .section__skills--item {
     text-align: center;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+  
+  .section__skills {
+    padding: 3rem;
+  }
+  .section__skills--main-list {
+    margin: 0;
+    width: 100%;
+  }
+  .section__skills--list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
