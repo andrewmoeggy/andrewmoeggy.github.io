@@ -117,6 +117,15 @@ header {
   .sticky  {
     justify-content: stretch;
   }
+  .footer__wrapper {
+    justify-content: stretch;
+  }
+  .footer-nav li {
+    margin-right: 1rem !important; 
+  }
+  header {
+    background-size: 100%;
+  }
 }
 .hero-box-text {
   color: #fff;
