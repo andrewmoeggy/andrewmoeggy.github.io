@@ -124,7 +124,7 @@ header {
     margin-right: 1rem !important; 
   }
   header {
-    background-size: 100%;
+    background-size: cover;
   }
 }
 .hero-box-text {
